@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('https://i.postimg.cc/sf6BBN7L/mina.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+
+h1, h2 {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    display: block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+form, #resultContainer {
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    color: white;
+}
+
+label, button {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+canvas {
+    margin-top: 20px;
+}

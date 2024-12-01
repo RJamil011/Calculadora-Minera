@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Viabilidad Minera</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Viabilidad Minera</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Calculadora de Viabilidad Minera</h1>
+    <h2>Flujograma Completo</h2>
+
+    <form id="miningForm">
+        <h3>Paso 1: Recopilación de Datos Iniciales</h3>
+        <label for="ley">Ley (%):</label>
+        <input type="number" id="ley" step="any" required>
+
+        <label for="recuperacion">Recuperación (%):</label>
+        <input type="number" id="recuperacion" step="any" required>
+
+        <label for="tonelajeDiario">Tonelaje Diario (toneladas/día):</label>
+        <input type="number" id="tonelajeDiario" step="any" required>
+
+        <label for="costosExtraccion">Costos de Extracción (USD/tonelada):</label>
+        <input type="number" id="costosExtraccion" step="any" required>
+
+        <label for="costosPlanta">Costos de Planta (USD/tonelada):</label>
+        <input type="number" id="costosPlanta" step="any" required>
+
+        <label for="costoMaquinaria">Costo de Maquinaria (USD/año):</label>
+        <input type="number" id="costoMaquinaria" step="any" required>
+
+        <label for="costoMantenimiento">Costo de Mantenimiento (USD/año):</label>
+        <input type="number" id="costoMantenimiento" step="any" required>
+
+        <label for="costosOperativos">Costos Operativos (USD/año):</label>
+        <input type="number" id="costosOperativos" step="any" required>
+
+        <h3>Paso 2.1: Selección de Mineral</h3>
+        <label for="mineral">Mineral:</label>
+        <select id="mineral" onchange="actualizarPrecio()">
+            <option value="">Seleccione un mineral</option>
+            <option value="Oro">Oro</option>
+            <option value="Plata">Plata</option>
+            <option value="Cobre">Cobre</option>
+            <option value="Hierro">Hierro</option>
+        </select>
+
+        <label for="precioMineral">Precio del Mineral (USD/tonelada):</label>
+        <input type="number" id="precioMineral" step="any" readonly>
+
+        <h3>Paso 2.2: Cálculo de Ley de Corte</h3>
+        <label for="stripRatio">Strip Ratio (s):</label>
+        <input type="number" id="stripRatio" step="any" required>
+
+        <label for="costoMinado">Costo de Minado por Tonelada (Mo):</label>
+        <input type="number" id="costoMinado" step="any" required>
+
+        <label for="costoProcesamiento">Costo de Procesamiento (Po):</label>
+        <input type="number" id="costoProcesamiento" step="any" required>
+
+        <label for="costosGenerales">Costos Generales (Oo):</label>
+        <input type="number" id="costosGenerales" step="any" required>
+
+        <label for="costosRefinamiento">Costos de Refinamiento y Transporte (R):</label>
+        <input type="number" id="costosRefinamiento" step="any" required>
+
+        <button type="button" onclick="calcularViabilidad()">Calcular Viabilidad</button>
+    </form>
+
+    <div id="resultContainer" style="display: none;">
+        <h3>Resultados del Proyecto</h3>
+        <p><strong>Ley de Corte:</strong> <span id="leyCorte"></span></p>
+        <p><strong>Ingresos Anuales:</strong> <span id="ingresosAnuales"></span> USD</p>
+        <p><strong>Costos Totales:</strong> <span id="costosTotales"></span> USD</p>
+        <p><strong>VPN:</strong> <span id="vpn"></span> USD</p>
+        <p><strong>Decisión:</strong> <span id="decision"></span></p>
+        <canvas id="barChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
