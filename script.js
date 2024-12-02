@@ -1,6 +1,6 @@
 const preciosMinerales = {
-    "Oro": 85195000,
-    "Plata": 986000,
+    "Oro": 86807.10,
+    "Plata": 1052.83,
     "Cobre": 9400,
     "Hierro": 120
 };
